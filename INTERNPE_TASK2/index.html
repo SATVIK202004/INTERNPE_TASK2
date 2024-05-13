@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATVIK E-commerce Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-image: url('satvik.jpg');">
+    <nav class="navbar">
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Signup</button>
+        <button id="aboutBtn">About</button>
+    </nav>
+    <div class="quote-container">
+        <!-- Quotes -->
+        <div class="quote" id="quote1">
+            <p>"E-commerce is about selling things where the transaction happens digitally. A large part of e-commerce is making transactions safely."</p>
+            <p class="author">- Jeff Bezos</p>
+        </div>
+        <div class="quote" id="quote2">
+            <p>"E-commerce isn't just a part of the way the future will be - it's here now!"</p>
+            <p class="author">- Al-Waleed bin Talal</p>
+        </div>
+        <div class="quote" id="quote3">
+            <p>"E-commerce is the engine of growth for the new digital economy."</p>
+            <p class="author">- Jeff Immelt</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="signupContainer" class="form-container" style="display: none;">
+            <h2>Signup</h2>
+            <form id="signupForm">
+                <input type="email" placeholder="Email" id="signupEmail" required>
+                <button type="button" onclick="sendOTP('signup')">Get OTP</button>
+                <input type="text" placeholder="OTP" id="signupOTP" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+        <div id="loginContainer" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" id="loginEmail" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="aboutContainer" class="form-container" style="display: none;">
+            <h2>About Satvik Calculators</h2>
+            <p>Satvik Calculators is a leading provider of high-quality calculators for various purposes. Our calculators are designed to meet the needs of professionals, students, and individuals alike. With a focus on accuracy, reliability, and user-friendliness, we strive to make complex calculations simple and efficient.</p>
+            <p>At Satvik Calculators, we are committed to excellence in product development and customer satisfaction. Our team of experts continuously works to innovate and improve our range of calculators, ensuring that our customers always have access to the best tools for their needs.</p>
+            <p>Whether you need a scientific calculator, financial calculator, or any other specialized calculator, Satvik Calculators has you covered. Explore our range of products and experience the difference that quality calculators can make in your work and daily life.</p>
+        </div>
+        <div id="calculatorContainer" class="calculator" style="display: none;">
+            <h2>Product Price Calculator</h2>
+            <form id="calculatorForm">
+                <div class="product">
+                    <img src="satvik1.jpg" alt="Product 1">
+                    <label for="productPrice1">Price:</label>
+                    <input type="number" id="productPrice1" name="productPrice1" value="1540" min="0" step="0.01">
+                </div>
+                <div class="product">
+                    <img src="satvik2.jpeg" alt="Product 2">
+                    <label for="productPrice2">Price:</label>
+                    <input type="number" id="productPrice2" name="productPrice2" value="1200" min="0" step="0.01">
+                </div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="0">
+            </form>
+            <div id="totalPrice"></div>
+        </div>
+    </div>
+    <div id="realTime" class="real-time"></div>
+    <footer class="footer">Peddisetty Venkat Satvik. All rights reserved. 2024.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
